@@ -15,7 +15,7 @@ templates = Jinja2Templates(directory="templates")
 
 CLIENT_ID = "1389852325648007290"
 CLIENT_SECRET = "dWOJvWCWiFWTKiw7xmrQa1iLoY7Pd6Ng"
-REDIRECT_URI = "http://localhost:8000/callback"
+REDIRECT_URI = "https://blake0v2.github.io/Arch-Angel/dashboard.html"
 GUILD_ID = "1365848012194316312"
 ADMIN_ROLE_IDS = {1365851423081762897, 1390148617091678300}
 
@@ -306,4 +306,5 @@ def logout(request: Request):
     # Clear the cookie and redirect to login page
     response = RedirectResponse(url="/login")
     response.delete_cookie("user_id")  # Deleting the "user_id" cookie
+
     return response
